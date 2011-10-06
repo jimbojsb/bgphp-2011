@@ -1,20 +1,42 @@
+
 <?php
 
 //asignment (and implicit declaration)
 $myVariable1 = "Test Value";
+
+echo ($myVariable1);
+
 $anotherString = "Test Value 2";
 $myNumber = 1;
 $myOtherNumber = 2;
 
-//short hand
-$myTotal -= $myNumber;
+$myTotal = $myNumber + $myOtherNumber;
+?>
+
+<br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<?php
+//
 //echo($myTotal);
 
 //concatenation, put any number of things together as a string
 //shorthand works for this too, .=
-$myFullText = $myVariable1 . $anotherString;
+$myFullText = $myVariable1 . " " . $anotherString;
 
-
-//is this variable defined at all?
-$exists = isset($myNumber);
 ?>
+
+
+<html>
+<head>
+    <title><?php echo $myFullText?></title>
+</head>
+<body>
+    <h1><?=$myFullText?></h1>
+</body>
+</html>
+
+
+
