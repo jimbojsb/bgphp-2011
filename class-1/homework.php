@@ -26,9 +26,11 @@ $newArray = array_intersect($mms, $colors);
 
 // #4
 // calculate the sum of all the numbers contained in $numbers and print it out
-echo array_sum(array_merge($numbers["lessthan10"], $numbers["lessthan20"])) . '<br/>';
+$bigArray = array_merge($numbers["lessthan10"], $numbers["lessthan20"]) . '<br/>';
+echo array_sum($bigArray);
 
 // #5
-// print out the total number of array elements in $colors and $numbers. Then print if that total number is less than 10.
-$totalNum = count(array_keys($colors)) + count(array_keys($numbers));
+// print out the total number of array slots in $colors and $numbers. Then print if that total number is less than 10.
+// array_keys($numbers) == array('lessthan10', 'lessthan20');
+$totalNum = count($colors) + count(array_keys($numbers));
 echo $totalNum < 10 . '<br/>';
