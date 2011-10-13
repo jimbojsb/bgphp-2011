@@ -22,7 +22,7 @@
     $djIndex = 10000;
     if ($djIndex > 12000) {
         $class = 'green';
-    } else if ($djIndex > 10000) {
+    } else if ($djIndex > 10000) {   
         $class = 'yellow';
     } else {
         $class = 'red';
