@@ -9,15 +9,51 @@ $strings = array("Austin is the capital of Texas.",
 
 // #1
 // write a function that takes an array of strings as an argument and returns the number of alphanumeric characters
+function numAlphanumeric($myStrings)
+{
+	$count = 0;
+	foreach ($myStrings as $string) {
+		for ($c = 0; $c < strlen($string); $c++) {
+			if (ctype_alnum($string{$c})) {
+				$count++;
+			}
+		}
+	}
+	return $count;
+}
 
 // #2
 // write a function that takes an array of strings as an argument and returns the number of words
+function numWords($myStrings)
+{
+	$count = 0;
+	foreach ($myStrings as $string) {
+		$count += str_word_count($string);
+	}
+	return $count;
+}
 
 // #3
 // write a function that takes an array of strings as an argument and returns the number of spaces
+function numSpaces($myStrings)
+{
+	return substr_count(implode('', $myStrings), ' ');
+}
 
 // #4
 // write a function that takes an array of strings as an argument and returns the number of capital letters are contained in $strings
+function numUpperCase($myStrings)
+{
+	$count = 0;
+	foreach ($myStrings as $string) {
+		for ($c = 0; $c < strlen($string); $c++) {
+			if (ctype_upper($string{$c})) {
+				$count++;
+			}
+		}
+	}
+	return $count;
+}
 
 // #5
 // write a function that takes an array of strings as an argument, and a string as a second argument. return the number
