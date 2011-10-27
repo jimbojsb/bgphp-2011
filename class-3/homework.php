@@ -1,76 +1,20 @@
 <?php
-$strings = array("Austin is the capital of Texas.",
-                 "There are 50 states in the United States of America",
-                 "There is no better joke about muffins and an oven than this one:",
-                 "There are two muffins are in an oven...",
-                 "One says to the other: God it is hot in here",
-                 "The other one replies: Oh no... It's a talking muffin");
+require_once 'homework/numalphanumeric.php';
+require_once 'homework/numspaces.php';
+require_once 'homework/numuppercase.php';
+require_once 'homework/numwords.php';
+require_once 'homework/stringcount.php';
+require_once 'homework/wordcounts.php';
+require_once 'homework/strings.php';
+
+echo "The answer to #1 is: " . numAlphanumeric($strings) . '<br>';
+echo "The answer to #2 is: " . numWords($strings) . '<br>';
+echo "The answer to #3 is: " . numSpaces($strings) . '<br>';
+echo "The answer to #4 is: " . numUpperCase($strings) . '<br>';
+echo "The answer to #5 is: " . stringCount($strings, 'the') . '<br>';
+echo "The answer to #6 is: ";
+wordCounts($strings);
 
 
-// #1
-// write a function that takes an array of strings as an argument and returns the number of alphanumeric characters
-function numAlphanumeric($myStrings)
-{
-	$count = 0;
-	foreach ($myStrings as $string) {
-		for ($c = 0; $c < strlen($string); $c++) {
-			if (ctype_alnum($string{$c})) {
-				$count++;
-			}
-		}
-	}
-	return $count;
-}
 
-// #2
-// write a function that takes an array of strings as an argument and returns the number of words
-function numWords($myStrings)
-{
-	$count = 0;
-	foreach ($myStrings as $string) {
-		$count += str_word_count($string);
-	}
-	return $count;
-}
 
-// #3
-// write a function that takes an array of strings as an argument and returns the number of spaces
-function numSpaces($myStrings)
-{
-	return substr_count(implode('', $myStrings), ' ');
-}
-
-// #4
-// write a function that takes an array of strings as an argument and returns the number of capital letters are contained in $strings
-function numUpperCase($myStrings)
-{
-	$count = 0;
-	foreach ($myStrings as $string) {
-		for ($c = 0; $c < strlen($string); $c++) {
-			if (ctype_upper($string{$c})) {
-				$count++;
-			}
-		}
-	}
-	return $count;
-}
-
-// #5
-// write a function that takes an array of strings as an argument, and a string as a second argument. return the number
-// of times the second string appears in the array of strings
-
-// #6
-// write a function that prints out a table of information about the words contained in an array of strings. the table should
-// have 2 columns, once which contains the word, and one which contains how many times the word appears in the array.
-//
-// Example:
-// | Austin  | 1 |
-// | talking | 1 |
-// | muffins | 2 |
-
-// #7a Put each function in it's own PHP file. Put $strings in it's own PHP file.
-
-// #7b call all these functions from this file and echo their output in the following format:
-// The answer to #1 is: [number]
-// The answer to #2 is: [number]
-// use $strings as your argument where necessary. use "the" as the second argument for #5.
