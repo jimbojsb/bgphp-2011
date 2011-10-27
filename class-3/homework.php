@@ -70,7 +70,7 @@ function numUpperCase($myStrings)
 
 // #7a Put each function in it's own PHP file. Put $strings in it's own PHP file.
 
-// #7 call all these functions from this file and echo their output in the following format:
+// #7b call all these functions from this file and echo their output in the following format:
 // The answer to #1 is: [number]
 // The answer to #2 is: [number]
 // use $strings as your argument where necessary. use "the" as the second argument for #5.

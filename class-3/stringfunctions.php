@@ -8,12 +8,18 @@ $everythingButFirstTwo = substr($myString, 3);
 
 
 $myString = "My name is Josh and my favorite color is red.";
-$nameLocation = strpos($myString, "name");
-$stringContainsMy = (strpos($myString, "My") !== FALSE); // because position is 0
+$nameLocation = strpos($myString, "is");
+$stringContainsMy = (strpos($myString, "My") !== FALSE); // because position is
 
-$myString = "My name is Josh and my favorite color is red.";
+if ($stringContainsMy) {
+    //echo "Yes, it contains My";
+}
+
+
+$myString = "My name is Josh and my favorite
+color is red.";
 $lengthOfMyString = strlen($myString);
-
+//echo $lengthOfMyString;
 
 
 
@@ -44,6 +50,44 @@ $newString = implode('_', $pieces);
 
 $myString = "apples are red";
 // $newString = "apples are fruit";
-$newString = str_replace("red", "fruit", $myString);
+//$newString = str_replace("red", "fruit", $myString);
 
-$newString = str_replace(array("apples", "red"), array("bananas", "yellow"), $myString);
+$newString = str_replace(array("apples"), array("bananas", "yellow"), $myString);
+//echo $newString;
+
+for ($c = 0; $c < strlen($myString); $c++) {
+    echo substr($myString, $c, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
