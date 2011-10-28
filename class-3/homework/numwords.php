@@ -7,5 +7,12 @@ function numWords($myStrings)
 	foreach ($myStrings as $string) {
 		$count += str_word_count($string);
 	}
+
+    for ($c = 0; $c < count($myStrings); $c++) {
+        $string = $myStrings[$c];
+        $count += str_word_count($string);
+
+    }
+
 	return $count;
 }
