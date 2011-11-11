@@ -6,3 +6,11 @@ joshbutts
 I think this is all working now. This post will be a little bit longer!
 1320971705
 ----
+joshbutts
+3rd test post
+1320973614
+----
+joshbutts
+testing logged in posts
+1320979831
+----

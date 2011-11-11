@@ -1,8 +1,16 @@
 <?php
 require_once 'lib/posts.php';
+require_once 'lib/users.php';
+require_once 'lib/utility.php';
+
+$username = getLoggedInUsername();
+if (!$username) {
+    redirect('/vanity/login.php');
+}
 
 if ($_POST) {
-    createPost($_POST['username'], $_POST['content']);
+    createPost($username, $_POST['content']);
+    redirect('/vanity/index.php');
 }
 
 include 'includes/header.php';
@@ -11,8 +19,6 @@ include 'includes/header.php';
 
 <h1>Submit a new post:</h1>
 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-    <label>Username:</label>
-    <input type="text" name="username"/><br/><br/>
     <label>Post: </label>
     <textarea rows="5" cols="30" name="content"></textarea><br/><br/>
     <input type="submit"/>

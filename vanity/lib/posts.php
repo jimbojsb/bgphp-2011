@@ -20,7 +20,7 @@ function getPosts()
 
 function createPost($username, $content)
 {
-    $data = arraY();
+    $data = array();
     $data[] = $username . PHP_EOL;
     $data[] = $content . PHP_EOL;
     $data[] = time() . PHP_EOL;

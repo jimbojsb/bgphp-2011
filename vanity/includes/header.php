@@ -9,5 +9,5 @@
 </div>
 <div id="main">
     <div id="nav">
-        [ <a href="index.php">Home</a> | <a href="submitpost.php">Submit New Post</a> ]
+        [ <a href="index.php">Home</a> | <a href="submitpost.php">Submit New Post</a> | <a href="login.php">Login</a> ]
     </div>
