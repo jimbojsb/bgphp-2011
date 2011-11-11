@@ -1,0 +1,68 @@
+body {
+    background-color: #333;
+    font-family: arial;
+    color: #333;
+}
+
+#main {
+    background-color: #ccc;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.post {
+    margin-bottom: 15px;
+    background-color: white;
+    border: 1px dashed #666;
+    padding: 10px;
+}
+
+
+#header p {
+    text-align: center;
+    font-family: museo;
+    color: white;
+    text-shadow: 2px 2px 2px #666;
+    font-size: 72px;
+    line-height: 72px;
+    margin: 20px;
+}
+
+#nav {
+    text-align: center;
+    color: #333;
+    margin: 10px;
+}
+
+#nav a {
+    color: #333;
+}
+
+#footer {
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+.post .username {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.post .username span {
+    font-style: normal;
+    font-size: 12px;
+}
+
+.post .timestamp {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.post .content {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
