@@ -10,8 +10,9 @@ function loginUser($username, $password)
         $user = trim($user);
         list($storedUsername, $storedPassword) = explode(USER_SEPARATOR, $user);
 
+        $hashPassword = sha1($password);
         if ($username == $storedUsername &&
-            $password == $storedPassword) {
+            $hashPassword == $storedPassword) {
             $foundUser = true;
             break;
         }
@@ -35,4 +36,17 @@ function getLoggedInUsername()
         return $_SESSION['username'];
     }
     return false;
+}
+
+function logout()
+{
+    session_start();
+    unset($_SESSION['username']);
+}
+
+function createUser($username, $password)
+{
+    $hashedPassword = sha1($password);
+    $userData = $username . USER_SEPARATOR . $hashedPassword . PHP_EOL;
+    file_put_contents(USERS_FILE, $userData, FILE_APPEND);
 }

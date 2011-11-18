@@ -1,5 +1,7 @@
 <?php
 require_once 'lib/posts.php';
+require_once 'lib/users.php';
+require_once 'lib/utility.php';
 
 $posts = getPosts();
 

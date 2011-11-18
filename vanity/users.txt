@@ -1,2 +1,1 @@
-joshbutts:mypassword
-otheruser:anotherpw#!@#
+joshbutts:9a46b8894891af7d47ac827729c596c9abd339fa

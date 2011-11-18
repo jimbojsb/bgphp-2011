@@ -9,5 +9,18 @@
 </div>
 <div id="main">
     <div id="nav">
-        [ <a href="index.php">Home</a> | <a href="submitpost.php">Submit New Post</a> | <a href="login.php">Login</a> ]
+        [ <a href="index.php">Home</a> | <a href="submitpost.php">Submit New Post</a> |
+
+        <?if (getLoggedInUsername()) {?>
+            Welcome, <?=getLoggedInUsername()?> (<a href="logout.php">Log Out</a>)
+        <?}else{?>
+            <a href="login.php">Login</a>
+        <?}?>
+        ]
     </div>
+<?
+    $message = flashMessage();
+?>
+    <?if ($message) {?>
+        <div id="flashmessage"><?=$message?></div>
+    <?}?>
